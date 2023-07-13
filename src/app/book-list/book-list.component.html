@@ -1,0 +1,20 @@
+<h2>Book List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Books of books">
+            <td>{{Books.bname}}</td>
+            <td>{{Books.author}}</td> 
+            <td>
+                <button (click)="updateBook(Books.bid)" class="btn btn-info">Update</button>
+                <button (click)="deleteBook(Books.bid)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+
+            </td>      
+        </tr>
+    </tbody>
+</table>

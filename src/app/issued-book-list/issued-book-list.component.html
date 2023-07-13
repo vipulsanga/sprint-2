@@ -1,0 +1,22 @@
+<h2>Issued-Book List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Student Class</th>
+            <th>Book Name</th>
+            <th>Issued-Date</th>
+            <th>Dua-Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let IssuedBook of issue">
+            <td>{{IssuedBook.stud.sname}}</td>
+            <td>{{IssuedBook.stud.studclass}}</td>  
+            <td>{{IssuedBook.book.bname}}</td>       
+            <td>{{ IssuedBook.issuedDate | date }}</td>
+            <td>{{ IssuedBook.returnDate | date }}</td>
+         </tr>
+    </tbody>
+</table>
